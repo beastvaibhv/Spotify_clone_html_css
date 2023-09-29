@@ -1,0 +1,353 @@
+:root{
+    --black: #000;
+    --grey: #121212;
+    --light-grey: #232323;
+    --white: #fff;
+}
+html,body{
+    height: 100%;
+  margin: 0rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  font-family: "Nunito", sans-serif;
+  background-color: var(--black);
+  color: var(--white);
+}
+.main-container::-webkit-scrollbar {
+    display: none;
+}
+a {
+    color: var(--white);
+    text-decoration: none;
+  }
+.container{
+    background-color: var(--black);
+    display: flex;
+    flex:1;
+    overflow: hidden;
+    padding: .5rem;
+}
+.sidebar{
+    flex:0.23;
+    background-color: var(--black);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    margin-right:0.5rem;
+    border-radius: 0.5rem;
+}
+.sidebar::-webkit-scrollbar {
+    display: none;
+}
+.top-icon{
+    
+    display:flex;
+    flex-direction:column;
+    gap: 0.4rem;
+    background-color: var(--grey);
+    padding:1rem;
+    margin-bottom: .5rem;
+    border-radius: 0.5rem;
+}
+.logo>img{
+   width: 6.5rem; 
+   padding-left:1rem;
+}
+
+.link-flex {
+    font-size:1.5em;
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.75rem;
+    align-items: center;
+    opacity: 0.7;
+    font-weight: 600;
+    font-size: 1rem;
+    padding-left:1rem;
+    cursor: pointer;
+}
+.link-flex:hover {
+    opacity: 1;
+    transition: all 0.3s;
+  }
+  .link-flex>img{
+    width: 1.5rem;
+  }
+.link-flex p {
+    padding-left:0.75rem;
+    color: var(--white);
+}
+.left-playlist{
+    border-radius: 0.5rem;
+   
+    
+    background-color: var(--grey);
+    padding: 0.5rem;
+    margin-bottom: .5rem;
+}
+.lists{
+    
+    flex: 3;
+    gap:6rem;
+   
+   
+}
+.lists> div{
+    margin-top: 1.2rem;
+}
+
+
+
+
+.main-container{
+    flex:.77;
+    background: linear-gradient( to bottom, silver,rgb(146, 145, 145),rgb(92, 92, 92), var(--light-grey), var(--grey));
+
+    overflow-y: auto;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    padding-bottom:6rem;
+    padding-inline: 0.5rem;
+  
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+}
+.navbar:first-child{
+   padding-left: 0;
+}
+.user{
+    width: auto;
+    padding-inline: 0.5rem;
+    margin: 1.5rem;
+    background-color: var(--black);
+    display: flex;
+    border-radius: 25px;
+    align-items: center;
+    
+}
+.user>img{
+    width: 2rem;
+    height:2rem;
+    padding-inline: 0.25rem;
+    
+}
+.user>p{
+    padding-inline:0.25rem;
+}
+.main-container>h1{
+   
+    font-size: 40px;
+    padding-left: 2rem;
+}
+.recommended-flex{
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    
+    padding-inline:4rem;
+}
+.link-flex-2{
+    background-color: var(--light-grey);
+    width: 20rem;
+    font-size:3rem;
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.75rem;
+    align-items: center;
+    opacity: 0.7;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-right: 3rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    position:relative;
+}
+.link-flex-2:hover {
+
+    background-color: silver;
+    transition: all 0.1s;
+    
+  }
+
+
+  .link-flex-2>img{
+    display: inline-block;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    width: 5rem;
+  }
+
+.headings{
+    padding-inline: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.cards-container {
+    display: flex;
+    gap: 0.5rem;
+    padding-left: 2rem;
+    flex-wrap: wrap;
+    /* Other styles as needed */
+  }
+  
+  
+  .card {
+    width: 230px;
+    background-color: var(--light-grey);
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    height: 300px;
+    margin: 0rem 0.75rem;
+    position: relative;
+    
+  }
+  .card:hover{
+    background-color:darkgrey;
+    transition: all 0.1s;
+  }
+  .card-img {
+    width: 100%;
+    border-radius: 0.35rem;
+  }
+  
+  .card-name {
+    margin: 0.25rem 0;
+  }
+  
+  .card-description {
+    margin: 0;
+    font-size: 0.8rem;
+    opacity: 0.5;
+  }
+  .play {
+    position: absolute;
+    right: 30px;
+    bottom: 50px;
+    padding: 20px;
+    background-color: #1db954;
+    color: white;
+    border-radius: 50%;
+    display: none;
+    cursor: pointer;
+    opacity:0;
+    transition: all ease 0.4s;
+  }
+  
+  .card:hover .play {
+    display: block;
+    opacity :1;
+    background-color: green;
+    transform: translateY(-40px);
+
+  }
+.player{
+    position: sticky;
+    bottom:0;
+    height: 90px;
+    background-color: var(--black);
+    display: flex;
+    
+    justify-content: space-between;
+    align-items: center;
+    padding-inline:1rem;
+    z-index: 4;
+}
+.details{
+    
+display: flex;
+align-items: center;
+justify-content: start;
+
+}
+.details>img{
+    width: 4rem;
+    padding-left:0.5rem;    
+}
+.playing-details{
+    margin: 0.5rem;
+    padding: 0.5rem;
+    line-height: 0.6;
+}
+#heart{
+    width: 2.5rem;
+    opacity:0.7;
+    transition: all 0.1s;
+}
+#heart:hover{
+   
+    opacity:1;
+}
+#pip{
+    width: 2rem;
+    opacity:0.7;
+    transition: all 0.1s; 
+}
+#pip:hover{
+    opacity:1;
+}
+.player-stat{
+    display: flex;
+    flex-direction:column;
+    
+}
+.song-control{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin-bottom: 0;
+ padding-bottom: 0;
+ 
+}
+
+.player-stat img{
+    background-color: #000;
+}
+.player-stat button{
+    background-color: var(--black);
+    border:black;
+    opacity:0.7;
+}
+.song-control>button:hover{
+    opacity: 1;
+}
+.song-progress{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    padding-top: 0;
+}
+.song-progress>img{
+    height:2px;
+    width: 600px;
+    z-index: 5;
+    padding-inline: 2rem;
+}
+.song-progress>h5{
+    margin: 0;
+}
+  
+.controls{
+ display: flex;
+
+}
+.controls>button{
+    background-color: #000;
+    border:#000;
+}
+.controls>button>img{
+    background-color: #000;
+}
+.timeline-slider:hover,
+  .volume-slider:hover {
+    background-color: #1bd760;
+  }
+ 
